@@ -24,9 +24,11 @@ public class FilterOfNumberTest {
         for (int value = -5; value < 10; value++) {
             int[] actualResult = checkRemainder.filterMultiplesOfNumber(array, value);
             int[] expectedResult = correctFilterMultiplesOfNumber(array, value);
-            Assert.assertArrayEquals("Test failed with array: " + actualResult.toString()
-                    + "\nexpected array: " + expectedResult.toString()
-                    + "\nand value: " + value, actualResult, expectedResult);
+            Assert.assertArrayEquals(
+                    "Test failed with array: " + actualResult.toString() + "\nexpected array: "
+                            + expectedResult.toString() + "\nand value: " + value,
+                    actualResult,
+                    expectedResult);
         }
     }
 
