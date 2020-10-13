@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-import java.util.stream.IntStream;
+import java.util.Arrays;
 
 public class FilterOfNumber {
 
@@ -13,6 +13,7 @@ public class FilterOfNumber {
      * без остатка на `multiplier`</p>
      */
     public int[] filterMultiplesOfNumber(int[] array, int multiplier) {
-        return IntStream.of(array).filter(i -> i % multiplier == 0).toArray();
+
+        return Arrays.stream(array).filter(i -> i % multiplier == 0).toArray();
     }
 }
