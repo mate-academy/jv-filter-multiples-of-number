@@ -1,5 +1,9 @@
 package core.basesyntax;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
 public class FilterOfNumber {
 
     /**
@@ -11,7 +15,7 @@ public class FilterOfNumber {
      * без остатка на `multiplier`</p>
      */
     public int[] filterMultiplesOfNumber(int[] array, int multiplier) {
-        int number = 0;
+        /*int number = 0;
         for (int i: array) {
             if (i % multiplier == 0) {
                 number++;
@@ -25,6 +29,7 @@ public class FilterOfNumber {
                 index++;
             }
         }
-        return result;
+        return result*/
+        return IntStream.of(array).filter(i -> i % multiplier == 0).toArray();
     }
 }
