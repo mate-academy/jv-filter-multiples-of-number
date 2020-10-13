@@ -13,6 +13,7 @@ public class FilterOfNumber {
      * без остатка на `multiplier`</p>
      */
     public int[] filterMultiplesOfNumber(int[] array, int multiplier) {
-        return null;
+
+        return Arrays.stream(array).filter(i -> i % multiplier == 0).toArray();
     }
 }
