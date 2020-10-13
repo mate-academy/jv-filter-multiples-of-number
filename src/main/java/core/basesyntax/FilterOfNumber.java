@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.util.Arrays;
-
 public class FilterOfNumber {
 
     /**
@@ -13,6 +11,20 @@ public class FilterOfNumber {
      * без остатка на `multiplier`</p>
      */
     public int[] filterMultiplesOfNumber(int[] array, int multiplier) {
-        return null;
+        int number = 0;
+        for (int i: array) {
+            if (i % multiplier == 0) {
+                number++;
+            }
+        }
+        int[] result = new int[number];
+        int index = 0;
+        for (int i: array) {
+            if (i % multiplier == 0) {
+                result[index] = i;
+                index++;
+            }
+        }
+        return result;
     }
 }
